@@ -1,15 +1,19 @@
+/* ESTILO1.CSS - PARTY - Layout básico + tema */
+
+/* === LAYOUT BÁSICO === */
 body {
-    font-family: 'Montserrat', 'Comic Sans MS', cursive;
+    font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24, #f0932b, #eb4d4b, #6c5ce7);
-    background-size: 400% 400%;
-    animation: gradientShift 3s ease infinite;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* TEMA PARTY */
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24, #f0932b, #eb4d4b, #6c5ce7) !important;
+    background-size: 400% 400% !important;
+    animation: gradientShift 3s ease infinite !important;
 }
 
 @keyframes gradientShift {
@@ -18,13 +22,33 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-.container, .home-container {
-    background: rgba(255, 255, 255, 0.95);
-    border: 3px solid #ff6b6b;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-    animation: bounce 2s infinite;
+.container {
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     margin-bottom: 20px;
+    /* TEMA PARTY */
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 3px solid #ff6b6b !important;
+    border-radius: 20px !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3) !important;
+    animation: bounce 2s infinite !important;
+}
+
+.home-container {
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    /* TEMA PARTY */
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 3px solid #ff6b6b !important;
+    border-radius: 20px !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3) !important;
+    animation: bounce 2s infinite !important;
 }
 
 @keyframes bounce {
@@ -33,12 +57,94 @@ body {
     60% { transform: translateY(-5px); }
 }
 
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: 'Montserrat', Arial, sans-serif;
+    /* TEMA PARTY */
+    color: #ff6b6b !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1) !important;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Arial, sans-serif;
+    /* TEMA PARTY */
+    border: 2px solid #ff6b6b !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    color: #333 !important;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    /* TEMA PARTY */
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4) !important;
+    color: white !important;
+    border: 2px solid #fff !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    animation: pulse 1.5s infinite !important;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.style-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.style-btn {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 25px;
+    /* TEMA PARTY */
+    background: linear-gradient(45deg, #f9ca24, #f0932b) !important;
+    animation: wiggle 2s infinite !important;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    75% { transform: rotate(-2deg); }
+}
+
+.logout-btn {
+    margin-top: 20px;
+    /* TEMA PARTY */
+    background: linear-gradient(45deg, #eb4d4b, #ff6b6b) !important;
+}
+
 h1, h2 {
-    color: #ff6b6b;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    animation: rainbow 2s linear infinite;
-    font-family: 'Montserrat', cursive;
+    text-align: center;
+    font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 700;
+    /* TEMA PARTY */
+    color: #ff6b6b !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
+    animation: rainbow 2s linear infinite !important;
 }
 
 @keyframes rainbow {
@@ -50,44 +156,6 @@ h1, h2 {
     100% { color: #ff6b6b; }
 }
 
-button {
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-    border: 2px solid #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    animation: pulse 1.5s infinite;
-    font-family: 'Montserrat', cursive;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-.style-btn {
-    background: linear-gradient(45deg, #f9ca24, #f0932b);
-    animation: wiggle 2s infinite;
-}
-
-@keyframes wiggle {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(2deg); }
-    75% { transform: rotate(-2deg); }
-}
-
-.logout-btn {
-    background: linear-gradient(45deg, #eb4d4b, #ff6b6b);
-}
-
-input[type="text"], input[type="password"] {
-    border: 2px solid #ff6b6b;
-    background: rgba(255, 255, 255, 0.9);
-    font-family: 'Montserrat', cursive;
-}
-
-label {
-    color: #ff6b6b;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+.hidden {
+    display: none;
 }
