@@ -1,0 +1,139 @@
+body {
+    font-family: 'Montserrat', serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #8b0000);
+    min-height: 100vh;
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Fondo UMG translúcido */
+body::before {
+    content: "UMG";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    font-size: 20vw;
+    font-family: 'Montserrat', serif;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.03);
+    z-index: -1;
+    pointer-events: none;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.container, .home-container {
+    background: rgba(30, 60, 114, 0.85);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 15px;
+    box-shadow: 
+        0 15px 35px rgba(0,0,0,0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.container::before, .home-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    background: linear-gradient(45deg, 
+        rgba(255, 0, 0, 0.1) 0%, 
+        rgba(0, 0, 255, 0.1) 50%, 
+        rgba(255, 215, 0, 0.1) 100%);
+    z-index: -1;
+}
+
+h1, h2 {
+    color: #ffd700;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-family: 'Montserrat', serif;
+    background: linear-gradient(45deg, #ff0000, #0000ff, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+button {
+    background: linear-gradient(45deg, #8b0000, #1e3c72, #b8860b);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    font-family: 'Montserrat', serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    color: #ffd700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+button:hover {
+    background: linear-gradient(45deg, #b8860b, #8b0000, #1e3c72);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+    border-color: rgba(255, 215, 0, 0.6);
+}
+
+.style-btn {
+    background: linear-gradient(45deg, #ff0000, #0000ff, #ffd700);
+}
+
+.style-btn:hover {
+    background: linear-gradient(45deg, #ffd700, #ff0000, #0000ff);
+}
+
+.logout-btn {
+    background: linear-gradient(45deg, #8b0000, #ff0000);
+}
+
+.logout-btn:hover {
+    background: linear-gradient(45deg, #ff0000, #8b0000);
+}
+
+input[type="text"], input[type="password"] {
+    background: rgba(30, 60, 114, 0.6);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    color: #ffd700;
+    backdrop-filter: blur(5px);
+    font-family: 'Montserrat', serif;
+    font-weight: 400;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+    color: rgba(255, 215, 0, 0.6);
+}
+
+label {
+    color: #ffd700;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-family: 'Montserrat', serif;
+}
+
+.style-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}

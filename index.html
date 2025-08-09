@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/estilo1.css" id="defaultCSS">
+    <link rel="icon" sizes="64x64" href="/fav.ico">
+    <title>Inicio-Primer Parcial</title>
+    
 </head>
 <body>
-    <h1>Prueba</h1>
+    <!-- Página de Login -->
+    <div class="container">
+        <h1>Iniciar Sesión</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+    
+    <div class="style-buttons">
+        <button class="style-btn" onclick="changeStyle('party')">Party</button>
+        <button class="style-btn" onclick="changeStyle('fino')">Fino</button>
+        <button class="style-btn" onclick="changeStyle('nadita')">Nadita</button>
+    </div>
+
+    <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
