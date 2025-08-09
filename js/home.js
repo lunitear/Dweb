@@ -25,8 +25,8 @@ function logout() {
                 showConfirmButton: false,
                 timer: 1200
             }).then(() => {
-                // Redirigir al login
-                window.location.href = 'index.html';
+                // Redirigir al login (desde pages/ hacia la raíz)
+                window.location.href = '../index.html';
             });
         }
     });
@@ -40,16 +40,16 @@ function changeStyle(style) {
         currentStyleLink = null;
     }
 
-    // Aplicar el estilo seleccionado
+    // Aplicar el estilo seleccionado (rutas relativas desde pages/)
     switch(style) {
         case 'party':
-            loadStyleSheet('estilo1.css');
+            loadStyleSheet('../css/estilo1.css');
             break;
         case 'fino':
-            loadStyleSheet('estilo2.css');
+            loadStyleSheet('../css/estilo2.css');
             break;
         case 'nadita':
-            // No cargar ningún estilo adicional, solo el por defecto
+            loadStyleSheet('../css/nadita.css');
             break;
     }
 }

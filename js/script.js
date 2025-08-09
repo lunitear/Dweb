@@ -9,6 +9,8 @@ let currentStyleLink = null;
 document.addEventListener('DOMContentLoaded', function() {
     // Manejar el formulario de login
     document.getElementById('loginForm').addEventListener('submit', handleLogin);
+    // Agregar efectos adicionales
+    addEffects();
 });
 
 // Función para manejar el login
@@ -40,7 +42,7 @@ function handleLogin(e) {
 
 // Redirigir a página de home
 function showHomePage() {
-    window.location.href = 'home.html';
+    window.location.href = 'pages/home.html';
 }
 
 // Cambiar estilos
@@ -54,13 +56,13 @@ function changeStyle(style) {
     // Aplicar el estilo seleccionado
     switch(style) {
         case 'party':
-            loadStyleSheet('estilo1.css');
+            loadStyleSheet('css/estilo1.css');
             break;
         case 'fino':
-            loadStyleSheet('estilo2.css');
+            loadStyleSheet('css/estilo2.css');
             break;
         case 'nadita':
-            // No cargar ningún estilo adicional, solo el por defecto
+            loadStyleSheet('css/nadita.css');
             break;
     }
 }
@@ -76,7 +78,7 @@ function loadStyleSheet(fileName) {
 }
 
 // Agregar efectos adicionales para mejorar la experiencia
-document.addEventListener('DOMContentLoaded', function() {
+function addEffects() {
     // Agregar efecto de enfoque a los campos de entrada
     const inputs = document.querySelectorAll('input[type="text"], input[type="password"]');
     inputs.forEach(input => {
@@ -102,4 +104,4 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'translateY(0)';
         });
     });
-});
+}
